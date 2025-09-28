@@ -1,31 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nested Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #00CED1; /* Cyan-like header */
+            font-size: 18px;
+        }
+        .nested th {
+            background-color: #FFD700; /* Yellow header in nested table */
+        }
+    </style>
 </head>
 <body>
-    <table align="center" border="1" width="140">
+    <table>
         <tr>
-            <th>Name</th>
-            <th>Job Title</th>
-            <th>Email Address</th>
+            <th>Device</th>
+            <th>Brand</th>
+            <th>Specifications</th>
         </tr>
         <tr>
-            <td>Anna Fitzgerald</td>
-            <td>Staff Writer</td>
-            <td>example@company.com</td>
+            <td rowspan="2">Smartphone</td>
+            <td rowspan="2">Apple</td>
+            <td>
+                <!-- Nested Table -->
+                <table class="nested">
+                    <tr>
+                        <th>Model</th>
+                        <th>Storage</th>
+                    </tr>
+                    <tr>
+                        <td>iPhone 12 Pro</td>
+                        <td>256GB</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone SE</td>
+                        <td>128GB</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Laptop</td>
+            <td>HP</td>
+            <td>15.6" Display</td>
         </tr>
         <tr>
-            <td>John Smith</td>
-            <td>Marketing Manager</td>
-            <td>example2@company,com</td>
-        </tr>
-        <tr>
-            <td>Zendaya Grace</td>
-            <td>CEO</td>
-            <td>example3@gmail.com</td>
+            <td>Tablet</td>
+            <td>Samsung</td>
+            <td>10.5" Display</td>
         </tr>
     </table>
 </body>
